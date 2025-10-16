@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fruits</title>
+</head>
+<Body>
+    <h1> Heading 1</h1>
+    <hr>
+    <img scr="">
+    <img scr="">
+    <img scr="">
+    <img scr="">
+<br>
+    <h2></h2>
+    <img scr="">
+    <img scr="">
+    <img scr="">
+    <img scr="">
+<br>
+    <h3></h3>
+    <img scr="">
+    <img scr="">
+    <img scr="">
+    <img scr="">
+
+  <footer>
+    &copy; 2025 Fresh Fruits Website – Hình ảnh minh họa từ Unsplash
+  </footer>
+  </style>
+</body>
+</html>

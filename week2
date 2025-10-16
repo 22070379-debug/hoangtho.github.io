@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyperlink</title>
+</head>
+<body>
+  <h1>Sample hyperlink</h1>
+  <a href="https://www.google.com/?hl=vi&zx=1758771819305&no_sw_cr=1" target="_blank" rel="noopener noreferrer">
+    Google
+</a>
+  <h2>Table of contents
+    <ol.type="1">
+      <li><a.href="introduction">Introduction</a.href></li>
+      <li><a.href="review">review</a.href></li>
+      <li><a.href="method>method</a.href></li>
+      <li><a.href="results>results</a.href></li>
+    </ol.type>
+    <ol>
+      <p.id="introduction">This is introduction</p>
+      <p.id="review">This is review</p>
+      <p.id="method">method</p>
+      <p.id="results">Do you find it helpful?</p>
+    </ol>
+  </h2>
+</body>
+</html>

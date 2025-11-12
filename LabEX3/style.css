@@ -1,0 +1,211 @@
+/* Step 3 & 4: BODY, #wrap, header, #menu_top, #welcome */
+body {
+    margin: auto;
+    padding: 0px;
+    background: #CCCCCC;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+#wrap {
+    background: #FFFFFF;
+    margin: auto;
+    width: 900px;
+    height: auto;
+}
+
+header {
+    background: url(images/header.jpg);
+    height: 101px;
+    width: 900px;
+}
+
+#logo {
+    padding: 0 0 0 50px;
+}
+
+#menu_top {
+    margin-top: 55px;
+    margin-left: 50px;
+    background: #FFFFFF;
+    height: 40px;
+    opacity: 0.6;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.level1 {
+    clear: both;
+    list-style-type: none;
+    padding: 0;
+    opacity: 1.0;
+    color: #0000;
+    position: relative;
+}
+
+.level1 li {
+    display: inline;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    height: 20px;
+    font-weight: bold;
+}
+
+.level1 li a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+.level1 li a:hover {
+    color: green;
+}
+
+.level2 {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    margin-top: 13px;
+}
+
+.level1 li:hover .level2 {
+    display: block;
+}
+
+.level1 li {
+    float: none;
+    position: relative;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    background: #CCCCCC;
+}
+
+.level1 li:hover {
+    background: #CCGG; /* Có thể là #CCEEFF hoặc một màu khác */
+}
+
+#welcome {
+    background: #F8F8;
+    padding: 5px;
+    vertical-align: middle;
+    border: dotted 1px #FCF;
+    font-weight: bold;
+}
+
+/* Step 5 & 6: Content, Products, Promotion */
+#center_content {
+    background: url(images/center_bg.gif) repeat-y;
+    width: 900px;
+    min-height: 500px; /* Thêm min-height để thấy rõ background */
+}
+
+#product_content {
+    float: left;
+    width: 500px;
+    min-height: 200px;
+    float: left;
+}
+
+.title {
+    color: #00BF22;
+    font-size: 12px;
+    margin: 10px 10px 10px 15px;
+}
+
+.product {
+    border-bottom: dashed 1px #CCC;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.product_img {
+    clear: both;
+    float: left;
+    margin-left: 20px;
+}
+
+.product_description {
+    float: right;
+    width: 290px;
+    padding: 5px 15px;
+    border: solid 1px #DDD;
+    border-radius: 5px;
+}
+
+.product_name {
+    color: #00BF22;
+    font-weight: bold;
+}
+
+.product_about {
+    text-align: justify;
+}
+
+#promotion {
+    float: left;
+    width: 170px;
+}
+
+.product_small {
+    margin-bottom: 30px;
+}
+
+.product_small_img {
+    text-align: center;
+    color: #AAA;
+}
+
+.product_small_img img {
+    border-radius: 5px;
+    border: solid 1px #AAA;
+}
+
+.product_small_img {
+    text-align: center;
+    padding: 10px;
+    float: left;
+}
+
+/* Step 7: Category */
+#category {
+    float: right;
+    width: 200px;
+}
+
+.menu_right {
+    float: left;
+    width: 200px;
+}
+
+.menu_right ul {
+    list-style-type: none;
+    list-style-image: url(images/left_menu_bullet.gif);
+}
+
+.menu_right li {
+    padding: 5px 5px 10px;
+    border-bottom: dashed 1px #CCC;
+    font-weight: bold;
+}
+
+/* Step 8: Footer */
+.div_footer {
+    clear: both;
+}
+
+footer {
+    background: url(images/footer_bg.gif) no-repeat bottom;
+    height: 100px;
+    border-top: dashed 1px #CCC;
+}
+
+.div_left {
+    float: left;
+    width: 500px;
+    padding: 10px 10px 20px;
+    color: #666666;
+}
+
+.foot_text {
+    margin: 5px 0;
+}

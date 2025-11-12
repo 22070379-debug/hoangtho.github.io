@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7 & 8 - Selector Priority</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Internal CSS sẽ được viết ở đây */
+        /* Mục tiêu: định dạng các đoạn văn bản */
+        p {
+            color: purple; /* Màu mặc định cho tất cả <p> */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red;">Here is Customize Tag</h1>
+    
+    <p>The first paragraph.</p> 
+
+    <p class="custom">The second paragraph.</p> 
+
+    <p id="third">The third paragraph.</p> 
+
+    <p style="color: blue;">The fourth paragraph.</p>
+
+    <p class="custom" id="fifth">The fifth paragraph.</p>
+
+    <p class="external-class">The sixth paragraph.</p>
+
+    <p class="custom" style="color: green;">The seventh paragraph.</p>
+</body>
+</html>

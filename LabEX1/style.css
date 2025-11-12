@@ -1,0 +1,27 @@
+/* 1. Tag Selector (Độ ưu tiên thấp nhất: 0,0,0,1) */
+p {
+    color: orange;
+    font-size: 14px;
+}
+
+/* 2. Class Selector (Độ ưu tiên: 0,0,1,0) */
+.custom {
+    color: red; /* Đỏ sẽ ghi đè cam */
+    font-weight: bold;
+}
+
+/* 3. ID Selector (Độ ưu tiên: 0,1,0,0) */
+#third {
+    color: yellow; /* Vàng sẽ ghi đè đỏ và cam */
+    text-decoration: underline;
+}
+
+/* 4. Class Selector từ External CSS */
+.external-class {
+    color: teal; /* Màu xanh ngọc */
+}
+
+/* 5. Kết hợp (Độ ưu tiên: 0,1,1,0) - Áp dụng cho Đoạn 5 */
+#fifth.custom {
+    color: brown; 
+}

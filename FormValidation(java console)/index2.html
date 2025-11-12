@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lab 11 & 12 - Integer Checker</title>
+</head>
+<body>
+
+    <script language="javascript">
+        // Nhập số nguyên từ người dùng
+        var tA = prompt("Enter any integer");
+
+        // Kiểm tra nếu người dùng nhấn Cancel hoặc không nhập gì
+        if (tA == null || tA === "") {
+            // Yêu cầu nhập số
+            document.write("<font color='red'>You must enter a number</font>");
+        } 
+        // Kiểm tra nếu là số chẵn (phần dư của phép chia cho 2 bằng 0)
+        else if (tA % 2 == 0) {
+            document.write("<font color='green'>" + tA + " is an even number</font>");
+        } 
+        // Trường hợp còn lại: số lẻ (phần dư khác 0)
+        else {
+            document.write("<font color='blue'>" + tA + " is an odd number</font>");
+        }
+    </script>
+
+</body>
+</html>

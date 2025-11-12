@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lab 11 & 12</title>
+</head>
+<body>
+
+    <script language="javascript">
+        // Nhập số A và B từ người dùng
+        var tA = prompt("Enter number A");
+        var tB = prompt("Enter number B");
+
+        // Biến để lưu trạng thái tổng quát về lỗi
+        var isTotal = true; 
+
+        // Kiểm tra xem tA hoặc tB có null (Cancel) hoặc không phải là số hợp lệ (isNaN) không
+        if (tA == null || tB == null || isNaN(tA) || isNaN(tB)) {
+            isTotal = false; // Đặt trạng thái là có lỗi
+            alert("Number is formatted incorrect!"); 
+        } else if (tA == "" || tB == "") {
+            isTotal = false; // Đặt trạng thái là có lỗi
+            alert("Number is formatted incorrect!");
+        } 
+        
+        // Nếu không có lỗi (isTotal vẫn là true)
+        if (isTotal) {
+            // Chuyển đổi chuỗi thành số thực để tính tổng
+            var result = parseFloat(tA) + parseFloat(tB); 
+            // Hiển thị kết quả
+            alert("Result is: " + tA + " + " + tB + " = " + result);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Gradient Menu</title>
+<style>
+/* Menu container */
+.Menu {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+/* Title with CSS3 gradient */
+.MenuTitle {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+/* Remove default bullet style and padding */
+.Menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each menu item */
+.Menu li {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+/* Add small bullet before each item */
+.Menu li::before {
+    content: "•";
+    color: #ff5e62;
+    position: absolute;
+    left: 10px;
+}
+
+/* Hover effect: background yellow */
+.Menu li:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="Menu">
+    <div class="MenuTitle">Main Menu</div>
+    <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Products</li>
+        <li>Contact</li>
+    </ul>
+</div>
+</body>
+</html>

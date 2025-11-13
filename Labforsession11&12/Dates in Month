@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dates in month</title>
+    <script language="javascript">
+        // Hàm kiểm tra năm nhuận (leap year)
+        function isLeapYear(n) {
+            // Năm nhuận là năm chia hết cho 4, ngoại trừ năm chia hết cho 100 nhưng không chia hết cho 400
+            return (n % 4 == 0 && n % 100 != 0) || (n % 400 == 0);
+        }
+
+        function update() {
+            var year = document.f.year;
+            var month = document.f.month.value;
+            var date = document.f.date;
+
+            // 1. Kiểm tra năm
+            if (isNaN(year.value) || year.value === "") {
+                date.value = "Year must be a number!";
+                year.focus();
+                return;
+            }
+
+            // 2. Kiểm tra tháng
+            switch (month) {
+                // Tháng 1, 3, 5, 7, 8, 10, 12 có 31 ngày
+                case "1":
+                case "3":
+                case "5":
+                case "7":
+                case "8":
+                case "10":
+                case "12":
+                    date.value = 31;
+                    break;
+                // Tháng 4, 6, 9, 11 có 30 ngày
+                case "4":
+                case "6":
+                case "9":
+                case "11":
+                    date.value = 30;
+                    break;
+                // Tháng 2
+                case "2":
+                    // Kiểm tra năm nhuận
+                    if (isLeapYear(year.value)) {
+                        date.value = 29;
+                    } else {
+                        date.value = 28;
+                    }
+                    break;
+                default:
+                    date.value = ""; // Trường hợp không chọn tháng
+            }
+        }
+    </script>
+</head>
+<body onload="update()"> 
+    <form name="f" align="center">
+        <table border="0" align="center" width="400">
+            <tr>
+                <td colspan="3" align="center">
+                    <b>DATES IN MONTH</b>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Year:</td>
+                <td>
+                    <input type="text" name="year" size="10" value="2024" onblur="update()">
+                </td>
+                <td rowspan="2">
+                    <select name="month" onchange="update()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Date:</td>
+                <td>
+                    <input type="text" name="date" size="10" readonly>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

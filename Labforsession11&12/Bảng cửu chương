@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+    <script language="javascript">
+        function display() {
+            var n = document.f.n.value;
+            var ifram = document.getElementById("view_area");
+            
+            // Truy cập vào nội dung của iframe
+            var txt_document = ifram.contentWindow.document;
+
+            // Xóa nội dung cũ
+            txt_document.body.innerHTML = "";
+
+            // Kiểm tra tính hợp lệ của số
+            if (isNaN(n) || n.value === "") {
+                txt_document.write("<font color='red'>You must enter a number</font>");
+                return;
+            }
+
+            // Viết tiêu đề
+            txt_document.write("<h3>Multiplication table for " + n + "</h3>");
+            
+            // Lặp và hiển thị bảng cửu chương
+            for (i = 1; i <= 10; i++) {
+                txt_document.write(n + " * " + i + " = " + (n * i) + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f" align="center">
+        <table border="0" align="center" width="400">
+            <tr>
+                <td colspan="3" align="center">
+                    <b>MULTIPLICATION TABLE</b>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Number that you want to display:</td>
+                <td>
+                    <input type="text" name="n" size="10">
+                </td>
+                <td>
+                    <input type="button" value="Display" onClick="display()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <iframe id="view_area" width="100%" height="200px" frameborder="0"></iframe>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -37,3 +37,73 @@
             // Tạo đối tượng Product mới
             let newProduct = new Product(newCode, newName, newPrice);
             
+            // Thêm vào mảng
+            products.push(newProduct);
+            
+            // Cập nhật hiển thị danh sách
+            show();
+            
+            // Xóa nội dung trên form sau khi thêm
+            f.reset();
+            f.code.focus();
+        }
+
+        // 3. Hàm Hiển thị Danh sách Sản Phẩm
+        function show() {
+            var content = document.getElementById("content");
+            var tableHTML = "<h3>Product List</h3>";
+            
+            if (products.length === 0) {
+                content.innerHTML = "No products found.";
+                return;
+            }
+
+            tableHTML += "<table border='1' width='400' align='center'>";
+            tableHTML += "<tr><th>Code</th><th>Name</th><th>Price</th></tr>";
+            
+            // Dùng vòng lặp for...of để duyệt qua mảng đối tượng
+            for (let product of products) {
+                tableHTML += "<tr>";
+                tableHTML += "<td>" + product.code + "</td>";
+                tableHTML += "<td>" + product.name + "</td>";
+                tableHTML += "<td>" + product.price.toFixed(2) + "</td>"; // Định dạng 2 chữ số thập phân
+                tableHTML += "</tr>";
+            }
+            
+            tableHTML += "</table>";
+            content.innerHTML = tableHTML;
+        }
+        
+        // Gọi hàm show() khi trang vừa tải xong để hiển thị dữ liệu ban đầu
+        window.onload = show;
+
+    </script>
+</head>
+<body>
+    <form name="f" align="center">
+        <table border="0" align="center" width="400">
+            <tr><td colspan="2" align="center"><b>PRODUCT MANAGEMENT</b></td></tr>
+            <tr>
+                <td align="right">Code:</td>
+                <td><input type="text" name="code" size="20"></td>
+            </tr>
+            <tr>
+                <td align="right">Name:</td>
+                <td><input type="text" name="name" size="20"></td>
+            </tr>
+            <tr>
+                <td align="right">Price:</td>
+                <td><input type="text" name="price" size="20"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Display" onClick="display()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <div id="content" align="center">
+        </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Product Management (OOP)</title>
+    <script language="javascript">
+        // 1. Định nghĩa Class Product
+        class Product {
+            constructor(code, name, price) {
+                this.code = code;
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        // Khởi tạo mảng để lưu trữ các đối tượng Product
+        let products = [];
+        
+        // Tạo một đối tượng Product mẫu và thêm vào mảng ban đầu
+        products.push(new Product("P01", "Yellow Rose", 15.5));
+        products.push(new Product("P02", "Blue Rose", 20.0));
+        products.push(new Product("P03", "Sun Flower", 10.0));
+
+        // 2. Hàm Thêm Sản Phẩm mới vào mảng
+        function display() {
+            var f = document.f;
+            var newCode = f.code.value;
+            var newName = f.name.value;
+            var newPrice = parseFloat(f.price.value);
+
+            // Kiểm tra lỗi cơ bản (có thể mở rộng với RegEx)
+            if (newCode === "" || newName === "" || isNaN(newPrice)) {
+                alert("Please enter valid data for all fields.");
+                return;
+            }
+
+            // Tạo đối tượng Product mới
+            let newProduct = new Product(newCode, newName, newPrice);
+            

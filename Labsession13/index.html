@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Add Two Numbers</title>
+    <script language="javascript">
+        // Nhập số A và B
+        var tA = prompt("Enter number A");
+        var tB = prompt("Enter number B");
+        
+        var isTotal = true;
+        
+        // Kiểm tra lỗi (null, rỗng, không phải là số)
+        if (tA == null || tB == null || isNaN(tA) || isNaN(tB)) {
+            isTotal = false; 
+            alert("Number is formatted incorrect!"); 
+        } else if (tA === "" || tB === "") { // Sử dụng === cho so sánh nghiêm ngặt
+            isTotal = false;
+            alert("Number is formatted incorrect!");
+        } 
+        
+        if (isTotal) {
+            // Chuyển đổi sang số thực và tính tổng
+            var result = parseFloat(tA) + parseFloat(tB); 
+            // Hiển thị kết quả
+            alert("Result is: " + tA + " + " + tB + " = " + result);
+        }
+    </script>
+</head>
+<body>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mini calculator</title>
+    <script language="javascript">
+        function calculate() {
+           var a = parseFloat(document.calcform.txta.value);
+           var b = parseFloat(document.calcform.txtb.value);
+           var operation = document.calcform.slto.value;
+           var result;
+           if (operator === "+"){
+            result = a+b;
+           }else if (operator ==="-"){
+            result = a-b;
+           }else if (operator === "*"){
+            result = a*b;
+           }else if(operator ==="/"){
+            result = a/b
+           }else {
+            result = "Invalid"
+           }
+        
+        Document.GetElementbyId("lbResult").InnerText = result;}
+        </script>
+</head>
+<body>
+    <div id="calculator-container">
+        <h2 class="title">mini calculator</h2>
+        
+        <form name="calcform">
+            <div class="input-group">
+                <label for="txta">Element A:</label>
+                <input type="text" id="txta" name="txta">
+            </div>
+            
+            <div class="input-group">
+                <label for="txtb">Element B:</label>
+                <input type="text" id="txtb" name="txtb">
+            </div>
+
+            <div class="input-group">
+                <label for="slto">Operation:</label>
+                <select id="slto" name="slto">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            
+            <button type="button" onclick="calculate()">Tính</button>
+            
+            <div class="result-group">
+                <label>Result:</label>
+                <span id="lbResult">0</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

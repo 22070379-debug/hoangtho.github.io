@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mini calculator</title>
+    <script language="javascript">
+        function calculate() {
+            var f = document.frmCal; 
+            var tA = f.tA.value;
+            var tB = f.tB.value;
+            var tOp = f.tOp.value;
+
+            // Regular Expression: Kiểm tra xem tA và tB có phải là số (bao gồm dấu âm, thập phân)
+            // numberFormat = /^(-|\+)?(\d|[1-9]\d*)(\.\d+)?$/; (Dựa trên hình c3daaa.jpg)
+            var numberFormat = /^(-|\+)?(\d|[1-9]\d*)(\.\d+)?$/; 
+
+            // Kiểm tra tính hợp lệ của số A
+            if (numberFormat.test(tA) == false) {
+                alert("tA must be a number!"); 
+                f.tA.focus();
+                return;
+            }
+            
+            // Kiểm tra tính hợp lệ của số B
+            if (numberFormat.test(tB) == false) {
+                alert("tB must be a number!"); 
+                f.tB.focus();
+                return;
+            }
+            
+            // Kiểm tra lỗi chia cho 0
+            if (tOp == "/" && parseFloat(tB) == 0) {
+                alert("tB can't be 0!"); 
+                f.tB.value = "";
+                f.tB.focus();
+                return;
+            }
+
+            // Dùng hàm eval() để tính toán biểu thức
+            f.tResult.value = eval(tA + tOp + tB);
+        }
+    </script>
+</head>
+<body>
+    <form name="frmCal" align="center">
+        <table border="0" align="center" width="200">
+            <tr><td colspan="2" align="center"><b>MINI CALCULATOR</b></td></tr>
+            <tr><td align="right">A = </td><td><input type="text" name="tA" size="10" value=""></td></tr>
+            <tr><td align="right">B = </td><td><input type="text" name="tB" size="10" value=""></td></tr>
+            <tr>
+                <td align="right">Operator:</td>
+                <td>
+                    <select name="tOp">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td align="right">Result:</td><td><input type="text" name="tResult" size="10" readonly></td></tr>
+            <tr><td colspan="2" align="center"><input type="button" value="Calculate" onClick="calculate()"></td></tr>
+        </table>
+    </form>
+</body>
+</html>
